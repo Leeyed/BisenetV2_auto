@@ -1,0 +1,58 @@
+### project: Bilateral Network Semantic Segmentation V2 (BiSeNetV2)
+
+# write by web
+device:
+  train_gpu_device: None
+  other_gpu_device: None
+
+# used in eval process
+eval_params:
+  recall_threshold: None
+  precision_threshold: None
+
+# update by project_configs
+data_set:
+  nfs_mount_path: None
+  data_save_path_temp: None
+  class_name_path: None
+  segmentation_train_file_path: None
+  segmentation_val_file_path: None
+#  label_info_path: None
+  model_and_temp_file_save_path: None
+
+# fixed params
+train_process:
+  model_type: 'bisenetv2'
+  random_seed: 777
+#  local_rank: 0
+  port: 44592
+  ims_per_gpu: 4
+  num_aux_heads: 4
+  lr_start: 0.05
+  weight_decay: 0.0005
+  use_warm_up: False
+  warmup_iters: 1000
+  max_iter: 50000
+
+  use_fp16: True
+  use_sync_bn: False
+
+  # data aug strategy
+  use_resize: True
+  new_size: [1024, 1024]
+  use_random_hor_flip: True
+  use_img_hsvJitter: True
+  # brightness=0.4, contrast=0.4, saturation=0.4
+  jitter_range: [0.4, 0.4, 0.4]
+  use_img_rotation: True
+  rotate_degree: 180
+  use_grey_img: True
+  use_overlap: True
+  margin: 5
+
+  # not support
+  use_random_scale: False
+  scales: [0.25, 2.]
+  user_crop: True
+  cropsize: [1024, 1024]
+

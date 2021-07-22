@@ -1,0 +1,47 @@
+model_set:
+  detection_train_gpu_device: 0,1,2
+  other_gpu_device: '3'
+  transfer_model_business_param: sjht
+test_other_info_set:
+  recall_threshold: null
+  precision_threshold: null
+data_set:
+  anchors:
+  - 15
+  - 30
+  - 19
+  - 19
+  - 30
+  - 15
+  - 25
+  - 50
+  - 36
+  - 36
+  - 50
+  - 25
+  - 43
+  - 86
+  - 60
+  - 60
+  - 86
+  - 43
+  delete_labels:
+  - background
+  - gj
+  - wxqy
+  - zst
+  - hfb
+  nfs_mount_path: /home/liusheng/data/images4code
+  data_save_path_temp: /home/liusheng/tmptraindata/sjht/sjht-bdnb-275/1.1_train_data
+  detection_train_file_path: /home/liusheng/data/images4code/ai_model_ckpt/sjht/sjht-bdnb-275/1.1/202107081439_train.txt
+  detection_val_file_path: /home/liusheng/data/images4code/ai_model_ckpt/sjht/sjht-bdnb-275/1.1/202107081439_val.txt
+  class_name_path: ./label_class_names.txt
+  model_and_temp_file_save_path: /home/liusheng/data/images4code/ai_model_ckpt/sjht/sjht-bdnb-275/1.1/model_and_temp_file
+  config_project_path: /home/liusheng/data/images4code/ai_model_ckpt/sjht/sjht-bdnb-275/1.1/config_project.yaml
+  config_json_path: /home/liusheng/data/images4code/ai_model_ckpt/sjht/sjht-bdnb-275/1.1/config.json
+  segmentation_train_file_path: /home/liusheng/data/images4code/ai_model_ckpt/sjht/sjht-bdnb-275/1.1/202107081439_train.txt
+  segmentation_val_file_path: /home/liusheng/data/images4code/ai_model_ckpt/sjht/sjht-bdnb-275/1.1/202107081439_val.txt
+project_name: sjht-bdnb-275_1.1
+device:
+  train_gpu_device: '0'
+  other_gpu_device: '0'
